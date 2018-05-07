@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="j6k-if-feq">
+                                <rect key="frame" x="137" y="607" width="100" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="5sZ-rD-gU2"/>
+                                    <constraint firstAttribute="width" constant="100" id="U5T-8C-dN4"/>
+                                </constraints>
+                                <state key="normal" title="Start"/>
+                                <connections>
+                                    <action selector="downloadButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="sS0-No-rY9"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7ea-LV-LS3">
+                                <rect key="frame" x="16" y="246" width="343" height="30"/>
+                                <fontDescription key="fontDescription" name="LaoSangamMN" family="Lao Sangam MN" pointSize="23"/>
+                                <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jMF-a0-4To">
+                                <rect key="frame" x="16" y="20" width="343" height="58.5"/>
+                                <string key="text">Input the url of the file you wish to download as well as the total file size. You can also input the number of chuncks you want the file to download in.</string>
+                                <fontDescription key="fontDescription" name="LaoSangamMN" family="Lao Sangam MN" pointSize="15"/>
+                                <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="URL" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="AE3-5U-0BJ">
+                                <rect key="frame" x="16" y="86" width="343" height="30"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" keyboardType="URL" textContentType="url"/>
+                            </textField>
+                            <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="Pkk-lo-V06">
+                                <rect key="frame" x="16" y="317" width="343" height="2"/>
+                            </progressView>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="File Size MiB" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="1zs-la-ctM">
+                                <rect key="frame" x="16" y="134" width="343" height="30"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
+                            </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="# Chunks" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="A3r-46-VwI">
+                                <rect key="frame" x="16" y="182" width="343" height="30"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
+                            </textField>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="7ea-LV-LS3" secondAttribute="trailing" constant="16" id="5tc-NM-Hht"/>
+                            <constraint firstItem="AE3-5U-0BJ" firstAttribute="top" secondItem="jMF-a0-4To" secondAttribute="bottom" constant="8" id="7LT-pn-mzM"/>
+                            <constraint firstItem="1zs-la-ctM" firstAttribute="top" secondItem="AE3-5U-0BJ" secondAttribute="bottom" constant="18" id="7tH-7r-PKq"/>
+                            <constraint firstItem="A3r-46-VwI" firstAttribute="top" secondItem="1zs-la-ctM" secondAttribute="bottom" constant="18" id="Ajw-2D-FR8"/>
+                            <constraint firstItem="AE3-5U-0BJ" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="B5N-gs-sRJ"/>
+                            <constraint firstItem="jMF-a0-4To" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="IJQ-yf-sJq"/>
+                            <constraint firstItem="7ea-LV-LS3" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="KAx-J3-cbY"/>
+                            <constraint firstItem="jMF-a0-4To" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="KNi-xd-lgE"/>
+                            <constraint firstItem="Pkk-lo-V06" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="Kl8-vI-hdb"/>
+                            <constraint firstItem="A3r-46-VwI" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="MR7-ga-DFm"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="AE3-5U-0BJ" secondAttribute="trailing" constant="16" id="MW2-fr-fsB"/>
+                            <constraint firstItem="7ea-LV-LS3" firstAttribute="top" secondItem="A3r-46-VwI" secondAttribute="bottom" constant="34" id="Pqq-D3-m1g"/>
+                            <constraint firstItem="Pkk-lo-V06" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="R5I-jI-QWa"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="A3r-46-VwI" secondAttribute="trailing" constant="16" id="S2J-cL-1av"/>
+                            <constraint firstItem="1zs-la-ctM" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="UC0-nM-xov"/>
+                            <constraint firstItem="j6k-if-feq" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Zkl-3o-t53"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="1zs-la-ctM" secondAttribute="trailing" constant="16" id="bep-LS-ub5"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="j6k-if-feq" secondAttribute="bottom" constant="20" id="eik-bg-mcf"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="jMF-a0-4To" secondAttribute="trailing" constant="16" id="fgc-i8-x1I"/>
+                            <constraint firstItem="Pkk-lo-V06" firstAttribute="top" secondItem="7ea-LV-LS3" secondAttribute="bottom" constant="41" id="zDi-Zs-VXN"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <outlet property="chunksTextField" destination="A3r-46-VwI" id="60b-mm-S71"/>
+                        <outlet property="downloadButton" destination="j6k-if-feq" id="yud-55-0Ns"/>
+                        <outlet property="label" destination="7ea-LV-LS3" id="K5X-6W-s1F"/>
+                        <outlet property="progressBar" destination="Pkk-lo-V06" id="fH1-9a-xyj"/>
+                        <outlet property="sizeTextField" destination="1zs-la-ctM" id="YXt-yE-K00"/>
+                        <outlet property="textField" destination="AE3-5U-0BJ" id="8Rj-5X-3dm"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="136.80000000000001" y="132.68365817091455"/>
+        </scene>
+    </scenes>
+</document>
